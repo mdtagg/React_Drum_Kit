@@ -1,20 +1,9 @@
-
-
-.controls-container {
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    height:100%;
-    width:50%;
-}
-
 .button-title {
     font-size:1.25rem;
     font-weight:bold;
 }
 
-.power-button {
+.control-button {
     height:25px;
     width:50px;
     background:black;

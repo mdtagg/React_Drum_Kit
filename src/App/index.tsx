@@ -1,6 +1,6 @@
 import "./index.css"
-import DrumKeys from "../DrumKeys"
-import Controls from "../Controls"
+import DrumKeys from "../components/DrumKeys"
+import Controls from "../components/Controls"
 
 function App() {
 
