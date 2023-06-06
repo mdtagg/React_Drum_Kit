@@ -1,0 +1,32 @@
+
+
+.controls-container {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width:50%;
+}
+
+.button-title {
+    font-size:1.25rem;
+    font-weight:bold;
+}
+
+.power-button {
+    height:25px;
+    width:50px;
+    background:black;
+    border:none;
+    padding:0 5px;
+    cursor:pointer;
+}
+
+.slider {
+    height:17px;
+    width:20px;
+    background:blue;
+    position:relative;
+    left:20px;
+}
