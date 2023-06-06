@@ -1,0 +1,18 @@
+.key-container {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    width:50%;
+    height:100%;
+    padding:20px;
+    gap:10px;
+}
+
+.drum-pad {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:#8d8d8d;
+    font-weight:bold;
+    box-shadow: black 3px 3px 5px;
+    border-radius:5px;
+}
