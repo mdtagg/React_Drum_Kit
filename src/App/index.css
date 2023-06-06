@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+}
+
+body {
+    background: #8d8d8d;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+#drum-machine {
+    height:40vh;
+    width:40vw;
+    border:5px solid orange;
+    background:#b3b3b3;
+}
