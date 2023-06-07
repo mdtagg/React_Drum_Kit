@@ -1,7 +1,13 @@
 import "./index.css"
-import DrumPad from "../../DrumPad"
+import DrumPad from "../DrumPad"
 
-const DrumKeys = () => {
+export type setDisplayType = {
+    setDisplay:React.Dispatch<React.SetStateAction<string>>
+}
+
+const DrumKeys = (props:setDisplayType) => {
+
+    const { setDisplay } = props
 
     const newDrumPad = (
         drumPadId:string,
@@ -21,8 +27,8 @@ const DrumKeys = () => {
         newDrumPad("H1","Q","Q","/Heater-1.mp3"),
         newDrumPad("H2","W","W","/Heater-2.mp3"),
         newDrumPad("H3","E","E","/Heater-3.mp3"),
-        newDrumPad("H4","S","S","/Heater-4_1.mp3"),
-        newDrumPad("Clap","A","A","/Heater-6.mp3"),
+        newDrumPad("H4","A","A","/Heater-4_1.mp3"),
+        newDrumPad("Clap","S","S","/Heater-6.mp3"),
         newDrumPad("Open-H","D","D","/Dsc_Oh.mp3"),
         newDrumPad("Kick-Hat","Z","Z","/Kick_n_Hat.mp3"),
         newDrumPad("Kick","X","X","/RP4_KICK_1.mp3"),
@@ -38,6 +44,7 @@ const DrumKeys = () => {
                         content={value.content}
                         audioId={value.audioId}
                         src={value.src}
+                        setDisplay={setDisplay}
                     />
                 )
             })}
