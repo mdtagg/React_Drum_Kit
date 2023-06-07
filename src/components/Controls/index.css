@@ -15,3 +15,13 @@
     margin-top:15px;
     margin-bottom:15px;
 }
+
+.volume-slider-container {
+    height:35px;
+    width:80%;
+    margin-bottom:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

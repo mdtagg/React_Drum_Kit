@@ -1,13 +1,4 @@
-.key-container {
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    width:50%;
-    height:100%;
-    padding:20px;
-    gap:10px;
-}
-
-/* .drum-pad {
+.drum-pad {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -16,4 +7,4 @@
     box-shadow: black 3px 3px 5px;
     border-radius:5px;
     cursor:pointer;
-} */
+}
