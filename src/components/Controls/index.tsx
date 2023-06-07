@@ -4,18 +4,20 @@ import ControlButton from "../Control-Button"
 interface ControlsProps {
     display:string
     setDisplay:React.Dispatch<React.SetStateAction<string>>
+    setVolume:React.Dispatch<React.SetStateAction<string>>
 }
 
 const Controls = (props:ControlsProps) => {
 
-    const { display,setDisplay } = props
+    const { display, setDisplay, setVolume} = props
+
+    let newDisplay = ''
 
     const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         const volume = e.target.value
         setDisplay(volume)
+        setVolume(volume)
     }
-
-    let newDisplay = ''
 
     switch(display) {
         case 'Q':

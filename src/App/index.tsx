@@ -6,13 +6,17 @@ import { useState, useEffect } from "react"
 function App() {
 
   const [ display, setDisplay ] = useState('')
+  const [ volume, setVolume ] = useState('50')
 
   useEffect(() => {
     window.addEventListener('keydown',(e) => {
       const key = e.key.toUpperCase()
-      setDisplay(key)
-      const sound = document.getElementById(key) as HTMLAudioElement
-      sound.play()
+      const validKeys = ['Q','W','E','A','S','D','Z','X','C']
+      if(validKeys.includes(key)) {
+        setDisplay(key)
+        const sound = document.getElementById(key) as HTMLAudioElement
+        sound.play()
+      }
     })
   },[])
 
@@ -20,10 +24,12 @@ function App() {
     <div id="drum-machine">
       <DrumKeys
         setDisplay={setDisplay}
+        volume={volume}
       />
       <Controls
         display={display}
         setDisplay={setDisplay}
+        setVolume={setVolume}
       />
     </div>
   )

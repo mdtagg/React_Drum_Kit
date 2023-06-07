@@ -6,19 +6,20 @@ interface DrumPadProps {
     content:string
     src:string
     setDisplay:React.Dispatch<React.SetStateAction<string>>
+    volume:string
 }
 
 const DrumPad = (props:DrumPadProps) => {
 
-    const { drumPadId, content, audioId, src, setDisplay } = props
+    const { drumPadId, content, audioId, src, setDisplay, volume } = props
 
     const handleClick = (e:React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        const target = e.target as HTMLDivElement
-        const audioElement = target.firstElementChild as HTMLAudioElement
+        const audioElement = (e.target as HTMLDivElement).firstElementChild as HTMLAudioElement
         const { id } = audioElement
         setDisplay(id)
-        const sound = document.getElementById(id) as HTMLAudioElement
-        sound.play()
+        const intVolume = parseInt(volume) as number * .01
+        audioElement.volume = intVolume
+        audioElement.play()
     }
 
     return (
