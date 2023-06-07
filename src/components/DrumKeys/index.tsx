@@ -3,7 +3,12 @@ import DrumPad from "../../DrumPad"
 
 const DrumKeys = () => {
 
-    const newDrumPad = (drumPadId:string,content:string,audioId:string,src:string) => {
+    const newDrumPad = (
+        drumPadId:string,
+        content:string,
+        audioId:string,
+        src:string
+        ) => {
         return {
             drumPadId:drumPadId,
             content:content,
@@ -41,52 +46,3 @@ const DrumKeys = () => {
 }
 
 export default DrumKeys
-
-// {
-        //     drumPadId:"H2",
-        //     content: "W",
-        //     audioId:"W",
-        //     src:"/Heater-1.mp3"
-        // },
-        // {
-        //     drumPadId:"H1",
-        //     content: "Q",
-        //     audioId:"Q",
-        //     src:"/Heater-1.mp3"
-        // },
-        // {
-        //     drumPadId:"H1",
-        //     content: "Q",
-        //     audioId:"Q",
-        //     src:"/Heater-1.mp3"
-        // },
-        // {
-        //     drumPadId:"H1",
-        //     content: "Q",
-        //     audioId:"Q",
-        //     src:"/Heater-1.mp3"
-        // },
-        // {
-        //     drumPadId:"H1",
-        //     content: "Q",
-        //     audioId:"Q",
-        //     src:"/Heater-1.mp3"
-        // },
-        // {
-        //     drumPadId:"H1",
-        //     content: "Q",
-        //     audioId:"Q",
-        //     src:"/Heater-1.mp3"
-        // },
-        // {
-        //     drumPadId:"H1",
-        //     content: "Q",
-        //     audioId:"Q",
-        //     src:"/Heater-1.mp3"
-        // },
-        // {
-        //     drumPadId:"H1",
-        //     content: "Q",
-        //     audioId:"Q",
-        //     src:"/Heater-1.mp3"
-        // },
