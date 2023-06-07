@@ -23,6 +23,7 @@ function App() {
       />
       <Controls
         display={display}
+        setDisplay={setDisplay}
       />
     </div>
   )

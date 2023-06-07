@@ -3,11 +3,17 @@ import ControlButton from "../Control-Button"
 
 interface ControlsProps {
     display:string
+    setDisplay:React.Dispatch<React.SetStateAction<string>>
 }
 
 const Controls = (props:ControlsProps) => {
 
-    const { display } = props
+    const { display,setDisplay } = props
+
+    const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+        const volume = e.target.value
+        setDisplay(volume)
+    }
 
     let newDisplay = ''
 
@@ -39,7 +45,10 @@ const Controls = (props:ControlsProps) => {
         case "C":
             newDisplay = "Closed-HH"
             break 
-        default: ""
+        case "":
+            newDisplay = ""
+            break
+        default: newDisplay = `Volume ${display}`
     }
 
     return (
@@ -50,14 +59,12 @@ const Controls = (props:ControlsProps) => {
             <div id="display">
                 {newDisplay}
             </div>
-            {/* <input type="range" min="0" max="1"></input> */}
-            {/* <div className="volume-slider-container">
-                <div 
-                    className="volume-bar"
-                >
-                </div>
-                <div className="volume-tab"></div>
-            </div> */}
+            <input 
+                type="range" 
+                min="0" 
+                max="100" 
+                onChange={(e) => handleChange(e)}
+            ></input>
             <ControlButton
                 title="Bank"
             />
@@ -66,3 +73,11 @@ const Controls = (props:ControlsProps) => {
 }
 
 export default Controls
+
+{/* <div className="volume-slider-container">
+                <div 
+                    className="volume-bar"
+                >
+                </div>
+                <div className="volume-tab"></div>
+            </div> */}
