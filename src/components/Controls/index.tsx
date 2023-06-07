@@ -5,11 +5,13 @@ interface ControlsProps {
     display:string
     setDisplay:React.Dispatch<React.SetStateAction<string>>
     setVolume:React.Dispatch<React.SetStateAction<string>>
+    toggle:boolean
+    setToggle:React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const Controls = (props:ControlsProps) => {
 
-    const { display, setDisplay, setVolume} = props
+    const { display, setDisplay, setVolume, toggle, setToggle } = props
 
     let newDisplay = ''
 
@@ -57,6 +59,9 @@ const Controls = (props:ControlsProps) => {
         <div className="controls-container">
             <ControlButton
                 title="Power"
+                toggle={toggle}
+                setToggle={setToggle}
+                id="Power"
             />
             <div id="display">
                 {newDisplay}
@@ -67,19 +72,8 @@ const Controls = (props:ControlsProps) => {
                 max="100" 
                 onChange={(e) => handleChange(e)}
             ></input>
-            <ControlButton
-                title="Bank"
-            />
         </div>
     )
 }
 
 export default Controls
-
-{/* <div className="volume-slider-container">
-                <div 
-                    className="volume-bar"
-                >
-                </div>
-                <div className="volume-tab"></div>
-            </div> */}

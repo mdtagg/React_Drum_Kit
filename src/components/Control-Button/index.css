@@ -19,3 +19,43 @@
     position:relative;
     left:20px;
 }
+
+.transition-left {
+    left:0%;
+    transition:left 0.1s 
+}
+
+.transition-right {
+    right:10%;
+    transition:right 0.1s
+}
+
+/* @keyframes slide-left {
+    from {
+        transform:translateX(0%)
+    }
+    to {
+        transform:translateX(-100%)
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform:translateX(-100%)
+    }
+    to {
+        transform:translateX(0%)
+    }
+}
+
+.animate-left {
+    animation-name: slide-left;
+    animation-duration:0.1s;
+    animation-fill-mode: forwards;
+}
+
+.animate-right {
+    animation-name:slide-right;
+    animation-duration:0.1s;
+    animation-fill-mode:forwards;
+}  */

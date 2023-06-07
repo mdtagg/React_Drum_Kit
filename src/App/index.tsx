@@ -7,6 +7,7 @@ function App() {
 
   const [ display, setDisplay ] = useState('')
   const [ volume, setVolume ] = useState('50')
+  const [ toggle, setToggle ] = useState(true)
 
   useEffect(() => {
     window.addEventListener('keydown',(e) => {
@@ -25,11 +26,14 @@ function App() {
       <DrumKeys
         setDisplay={setDisplay}
         volume={volume}
+        toggle={toggle}
       />
       <Controls
         display={display}
         setDisplay={setDisplay}
         setVolume={setVolume}
+        toggle={toggle}
+        setToggle={setToggle}
       />
     </div>
   )

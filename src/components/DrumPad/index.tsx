@@ -7,19 +7,22 @@ interface DrumPadProps {
     src:string
     setDisplay:React.Dispatch<React.SetStateAction<string>>
     volume:string
+    toggle:boolean
 }
 
 const DrumPad = (props:DrumPadProps) => {
 
-    const { drumPadId, content, audioId, src, setDisplay, volume } = props
+    const { drumPadId, content, audioId, src, setDisplay, volume, toggle } = props
 
     const handleClick = (e:React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        const audioElement = (e.target as HTMLDivElement).firstElementChild as HTMLAudioElement
-        const { id } = audioElement
-        setDisplay(id)
-        const intVolume = parseInt(volume) as number * .01
-        audioElement.volume = intVolume
-        audioElement.play()
+        if(toggle) {
+            const audioElement = (e.target as HTMLDivElement).firstElementChild as HTMLAudioElement
+            const { id } = audioElement
+            setDisplay(id)
+            const intVolume = parseInt(volume) as number * .01
+            audioElement.volume = intVolume
+            audioElement.play()
+        }
     }
 
     return (

@@ -4,11 +4,12 @@ import DrumPad from "../DrumPad"
 export type setDisplayType = {
     setDisplay:React.Dispatch<React.SetStateAction<string>>
     volume:string
+    toggle:boolean
 }
 
 const DrumKeys = (props:setDisplayType) => {
 
-    const { setDisplay,volume } = props
+    const { setDisplay, volume, toggle } = props
 
     const newDrumPad = (
         drumPadId:string,
@@ -47,6 +48,7 @@ const DrumKeys = (props:setDisplayType) => {
                         src={value.src}
                         setDisplay={setDisplay}
                         volume={volume}
+                        toggle={toggle}
                     />
                 )
             })}
