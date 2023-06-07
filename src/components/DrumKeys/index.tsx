@@ -1,5 +1,14 @@
 import "./index.css"
 import DrumPad from "../DrumPad"
+import S1 from "../../assets/Heater-1.mp3"
+import S2 from "../../assets/Heater-2.mp3"
+import S3 from "../../assets/Heater-3.mp3"
+import S4 from "../../assets/Heater-4_1.mp3"
+import S5 from "../../assets/Heater-6.mp3"
+import S6 from "../../assets/Dsc_Oh.mp3"
+import S7 from "../../assets/Kick_n_Hat.mp3"
+import S8 from "../../assets/RP4_KICK_1.mp3"
+import S9 from "../../assets/Cev_H2.mp3"
 
 export type setDisplayType = {
     setDisplay:React.Dispatch<React.SetStateAction<string>>
@@ -26,15 +35,15 @@ const DrumKeys = (props:setDisplayType) => {
     }
 
     const drumPadValues = [
-        newDrumPad("H1","Q","Q","/Heater-1.mp3"),
-        newDrumPad("H2","W","W","/Heater-2.mp3"),
-        newDrumPad("H3","E","E","/Heater-3.mp3"),
-        newDrumPad("H4","A","A","/Heater-4_1.mp3"),
-        newDrumPad("Clap","S","S","/Heater-6.mp3"),
-        newDrumPad("Open-H","D","D","/Dsc_Oh.mp3"),
-        newDrumPad("Kick-Hat","Z","Z","/Kick_n_Hat.mp3"),
-        newDrumPad("Kick","X","X","/RP4_KICK_1.mp3"),
-        newDrumPad("Closed-H","C","C","/Cev_H2.mp3")
+        newDrumPad("H1","Q","Q",S1),
+        newDrumPad("H2","W","W",S2),
+        newDrumPad("H3","E","E",S3),
+        newDrumPad("H4","A","A",S4),
+        newDrumPad("Clap","S","S",S5),
+        newDrumPad("Open-H","D","D",S6),
+        newDrumPad("Kick-Hat","Z","Z",S7),
+        newDrumPad("Kick","X","X",S8),
+        newDrumPad("Closed-H","C","C",S9)
     ]
 
     return (
